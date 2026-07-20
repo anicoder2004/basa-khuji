@@ -1,36 +1,52 @@
 package com.anisoft.basa_khuji.controller
 
+import com.anisoft.basa_khuji.dto.BivagDto
+import com.anisoft.basa_khuji.dto.JelaDto
+import com.anisoft.basa_khuji.dto.ThanaDto
 import com.anisoft.basa_khuji.model.Bivag
 import com.anisoft.basa_khuji.model.Jela
 import com.anisoft.basa_khuji.model.Thana
 import com.anisoft.basa_khuji.repo.BivagRepository
 import com.anisoft.basa_khuji.repo.JelaRepository
 import com.anisoft.basa_khuji.repo.ThanaRepository
+import jakarta.validation.constraints.Min
+import jakarta.validation.constraints.Positive
+import org.springframework.http.ResponseEntity
+import org.springframework.validation.annotation.Validated
 import org.springframework.web.bind.annotation.*
 
 @RestController
-@RequestMapping("/api/basakhuji/locations")
+@RequestMapping("/v1/basakhuji/locations")
+@Validated
 class LocationController(
     private val bivagRepository: BivagRepository,
     private val jelaRepository: JelaRepository,
     private val thanaRepository: ThanaRepository
 ) {
 
-    // Hits: GET http://localhost:8080/api/basakhuji/locations/bivags
     @GetMapping("/bivags")
-    fun getAllBivags(): List<Bivag> {
-        return bivagRepository.findAll()
+    fun getAllBivags(): ResponseEntity<List<BivagDto>> {
+        val bivags = bivagRepository.findAll()
+        return ResponseEntity.ok(bivags.map { toBivagDto(it) })
     }
 
-    // Hits: GET http://localhost:8080/api/basakhuji/locations/jelas?divId=1
     @GetMapping("/jelas")
-    fun getJelasByBivag(@RequestParam divId: Int): List<Jela> {
-        return jelaRepository.findByDivId(divId)
+    fun getJelasByBivag(
+        @RequestParam @Positive @Min(1) divId: Int
+    ): ResponseEntity<List<JelaDto>> {
+        val jelas = jelaRepository.findByDivId(divId)
+        return ResponseEntity.ok(jelas.map { toJelaDto(it) })
     }
 
-    // Hits: GET http://localhost:8080/api/basakhuji/locations/thanas?distId=1
     @GetMapping("/thanas")
-    fun getThanasByJela(@RequestParam distId: Int): List<Thana> {
-        return thanaRepository.findByDistId(distId)
+    fun getThanasByJela(
+        @RequestParam @Positive @Min(1) distId: Int
+    ): ResponseEntity<List<ThanaDto>> {
+        val thanas = thanaRepository.findByDistId(distId)
+        return ResponseEntity.ok(thanas.map { toThanaDto(it) })
     }
+
+    private fun toBivagDto(e: Bivag): BivagDto = BivagDto(e.id, e.bivNam, e.bivBnNam)
+    private fun toJelaDto(e: Jela): JelaDto = JelaDto(e.id, e.divId, e.jelaNam, e.jelaBnNam)
+    private fun toThanaDto(e: Thana): ThanaDto = ThanaDto(e.id, e.distId, e.thanaNam, e.thanaBnNam)
 }

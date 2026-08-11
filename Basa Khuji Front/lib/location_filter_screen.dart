@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
+import 'core/config/app_config.dart';
 
 class LocationFilterScreen extends StatefulWidget {
   const LocationFilterScreen({super.key});
@@ -10,9 +11,7 @@ class LocationFilterScreen extends StatefulWidget {
 }
 
 class _LocationFilterScreenState extends State<LocationFilterScreen> {
-  // 1. Define your API Base URL
-  // NOTE: '10.0.2.2' is a magic IP that lets an Android Emulator talk to your computer's 'localhost'
-  final String baseUrl = "http://10.0.2.2:8080/api/basakhuji/locations";
+  String get baseUrl => AppConfig.locationBase;
 
   // 2. State Memory Pools (Equivalents to Kotlin MutableLists)
   List<dynamic> bivags = [];

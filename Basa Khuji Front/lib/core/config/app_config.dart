@@ -1,21 +1,21 @@
+/// Central app configuration.
+///
+/// `apiBaseUrl` is the host (no trailing context path). The backend (Spring
+/// Boot) serves every endpoint under the `/api` context-path, so Dart code
+/// should always use [fullApiUrl] as the Dio `baseUrl`.
 class AppConfig {
-  // Change this to your Fly.io URL after deployment
-  // For Android emulator: http://10.0.2.2:8080
-  // For iOS simulator: http://localhost:8080
-  // For production: https://basa-khuji-back.fly.dev
+  // Change this to your Fly.io URL after deployment:
+  //   Production:   https://basa-khuji-back.fly.dev
+  //   Android emu:  http://10.0.2.2:8080
+  //   iOS sim:      http://localhost:8080
   static const String apiBaseUrl = String.fromEnvironment(
     'API_BASE_URL',
     defaultValue: 'http://10.0.2.2:8080',
   );
 
+  /// Spring Boot `server.servlet.context-path`.
   static const String apiPath = '/api';
 
+  /// Full base URL used as Dio `baseUrl`, e.g. `http://10.0.2.2:8080/api`.
   static String get fullApiUrl => '$apiBaseUrl$apiPath';
-
-  // Location endpoints
-  static String get locationBase => '$fullApiUrl/v1/basakhuji/locations';
-  static String get divisionsUrl => '$locationBase/divisions';
-  static String get districtsUrl => '$locationBase/districts';
-  static String get thanasUrl => '$locationBase/thanas';
-  static String get areasUrl => '$locationBase/areas';
 }

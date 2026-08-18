@@ -20,6 +20,7 @@ class MyApp extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
+
     // Minimal theme using our ColorScheme and Typography
     // Full app_theme.dart will replace this later
     final lightTheme = ThemeData(

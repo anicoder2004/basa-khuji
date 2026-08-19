@@ -1,4 +1,4 @@
-package com.anisoft.basa_khuji.exception
+package com.anisoft.basa_khuji.shared
 
 import jakarta.validation.ConstraintViolationException
 import org.springframework.http.HttpStatus

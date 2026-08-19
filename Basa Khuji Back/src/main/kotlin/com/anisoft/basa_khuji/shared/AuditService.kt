@@ -1,7 +1,7 @@
-package com.anisoft.basa_khuji.service
+package com.anisoft.basa_khuji.shared
 
-import com.anisoft.basa_khuji.model.AuditLog
-import com.anisoft.basa_khuji.repo.AuditLogRepository
+import com.anisoft.basa_khuji.shared.AuditLog
+import com.anisoft.basa_khuji.shared.AuditLogRepository
 import com.fasterxml.jackson.databind.ObjectMapper
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Service

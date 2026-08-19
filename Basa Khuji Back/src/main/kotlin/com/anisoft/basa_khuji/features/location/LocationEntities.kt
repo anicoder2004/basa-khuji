@@ -1,4 +1,4 @@
-package com.anisoft.basa_khuji.model
+package com.anisoft.basa_khuji.features.location
 
 import jakarta.persistence.*
 

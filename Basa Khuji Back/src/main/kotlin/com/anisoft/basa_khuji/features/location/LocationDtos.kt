@@ -1,4 +1,4 @@
-package com.anisoft.basa_khuji.dto
+package com.anisoft.basa_khuji.features.location
 
 import com.fasterxml.jackson.annotation.JsonProperty
 

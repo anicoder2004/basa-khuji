@@ -1,4 +1,4 @@
-package com.anisoft.basa_khuji.service
+package com.anisoft.basa_khuji.shared
 
 import com.google.firebase.messaging.FirebaseMessaging
 import com.google.firebase.messaging.Message

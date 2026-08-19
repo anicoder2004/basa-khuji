@@ -1,6 +1,6 @@
 package com.anisoft.basa_khuji.config
 
-import com.anisoft.basa_khuji.service.RateLimitingService
+import com.anisoft.basa_khuji.shared.RateLimitingService
 import jakarta.servlet.http.HttpServletRequest
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.context.annotation.Bean

@@ -1,6 +1,6 @@
 package com.anisoft.basa_khuji.aspect
 
-import com.anisoft.basa_khuji.service.AuditService
+import com.anisoft.basa_khuji.shared.AuditService
 import jakarta.servlet.http.HttpServletRequest
 import org.aspectj.lang.ProceedingJoinPoint
 import org.aspectj.lang.annotation.Around

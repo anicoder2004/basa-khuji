@@ -1,14 +1,14 @@
-package com.anisoft.basa_khuji.controller
+package com.anisoft.basa_khuji.features.location
 
-import com.anisoft.basa_khuji.dto.BivagDto
-import com.anisoft.basa_khuji.dto.JelaDto
-import com.anisoft.basa_khuji.dto.ThanaDto
-import com.anisoft.basa_khuji.model.Bivag
-import com.anisoft.basa_khuji.model.Jela
-import com.anisoft.basa_khuji.model.Thana
-import com.anisoft.basa_khuji.repo.BivagRepository
-import com.anisoft.basa_khuji.repo.JelaRepository
-import com.anisoft.basa_khuji.repo.ThanaRepository
+import com.anisoft.basa_khuji.features.location.BivagDto
+import com.anisoft.basa_khuji.features.location.JelaDto
+import com.anisoft.basa_khuji.features.location.ThanaDto
+import com.anisoft.basa_khuji.features.location.Bivag
+import com.anisoft.basa_khuji.features.location.Jela
+import com.anisoft.basa_khuji.features.location.Thana
+import com.anisoft.basa_khuji.features.location.BivagRepository
+import com.anisoft.basa_khuji.features.location.JelaRepository
+import com.anisoft.basa_khuji.features.location.ThanaRepository
 import jakarta.validation.constraints.Min
 import jakarta.validation.constraints.Positive
 import org.springframework.http.ResponseEntity

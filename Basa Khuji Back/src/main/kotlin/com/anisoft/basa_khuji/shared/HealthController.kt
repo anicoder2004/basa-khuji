@@ -1,4 +1,4 @@
-package com.anisoft.basa_khuji.controller
+package com.anisoft.basa_khuji.shared
 
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.GetMapping

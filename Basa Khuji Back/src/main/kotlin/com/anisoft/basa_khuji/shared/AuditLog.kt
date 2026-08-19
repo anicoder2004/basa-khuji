@@ -1,4 +1,4 @@
-package com.anisoft.basa_khuji.model
+package com.anisoft.basa_khuji.shared
 
 import jakarta.persistence.*
 import java.time.Instant

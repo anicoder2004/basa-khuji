@@ -1,8 +1,5 @@
-package com.anisoft.basa_khuji.repo
+package com.anisoft.basa_khuji.features.location
 
-import com.anisoft.basa_khuji.model.Bivag
-import com.anisoft.basa_khuji.model.Jela
-import com.anisoft.basa_khuji.model.Thana
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.stereotype.Repository
 

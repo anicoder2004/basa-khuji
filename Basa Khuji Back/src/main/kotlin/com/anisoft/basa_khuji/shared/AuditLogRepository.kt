@@ -1,6 +1,5 @@
-package com.anisoft.basa_khuji.repo
+package com.anisoft.basa_khuji.shared
 
-import com.anisoft.basa_khuji.model.AuditLog
 import org.springframework.data.domain.Page
 import org.springframework.data.domain.Pageable
 import org.springframework.data.jpa.repository.JpaRepository

@@ -1,4 +1,4 @@
-package com.anisoft.basa_khuji.service
+package com.anisoft.basa_khuji.features.storage
 
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.stereotype.Service

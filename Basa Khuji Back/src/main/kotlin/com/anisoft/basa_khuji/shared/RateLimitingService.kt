@@ -1,4 +1,4 @@
-package com.anisoft.basa_khuji.service
+package com.anisoft.basa_khuji.shared
 
 import io.github.bucket4j.Bandwidth
 import io.github.bucket4j.Bucket

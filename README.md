@@ -1,54 +1,48 @@
 <div align="center">
 
-# 🏠 Basa Khuji
+#  Basa Khuji
 
 **Rental Property Discovery & Management Platform for Bangladesh**
 
-Find your next home. Move your belongings. Live better.
-
 </div>
 
----
 
-## 📖 What Is This?
+## What Is This?
 
-**Basa Khuji** (বাসা খুঁজি — "Finding a Home") is a full-stack rental property platform built specifically for the Bangladeshi market. It connects tenants with verified rental listings, streamlines the search experience with map-based discovery, and adds a unique **logistics integration** so tenants can arrange moving services ("Truck Lagbe") right from the platform.
+**Basa Khuji** (বাসা খুঁজি) is a full-stack rental property platform built specifically for the Bangladeshi market. It connects tenants with verified rental listings, streamlines the search experience with map-based discovery, and adds a unique **logistics integration** so tenants can arrange moving services right from the platform.
 
 The system is split into two major components:
 
-- **Backend** — A secure, high-performance REST API built with **Spring Boot (Kotlin)**.
-- **Frontend** — A cross-platform mobile app built with **Flutter**.
+- **Backend** : A secure, high-performance REST API built with **Spring Boot (Kotlin)**.
+- **Frontend** : A cross-platform mobile app built with **Flutter**.
 
----
 
-## 🎯 Purpose
+## Purpose
 
-Renting a home in Bangladesh is traditionally done through word-of-mouth, local brokers, and Facebook groups — fragmented, unverified, and time-consuming. Basa Khuji aims to fix that by providing:
+Renting a home in Bangladesh is traditionally done through word-of-mouth, local brokers, and Facebook groups - fragmented, unverified, and time-consuming. **Basa Khuji** aims to fix that by providing:
 
-- **Verified listings** — Only authenticated, real landlords can post properties.
-- **Fast discovery** — Location-based filtering down to thana (police station) level, backed by geospatial queries.
-- **Secure contact** — Landlord contact details are protected and only revealed through a fair token-based unlock system.
-- **Everything in one place** — Search → view → contact → arrange moving, all inside a single app.
+- **Verified listings** - Only authenticated, real landlords can post properties.
+- **Fast discovery** - Location-based filtering down to thana (police station) level, backed by geospatial queries.
+- **Secure contact** - Landlord contact details are protected and only revealed through a fair token-based unlock system.
+- **Everything in one place** - Search → view → contact → arrange moving, all inside a single app.
 
----
 
-## ✨ Key Features
+## Key Features
 
 ### Location-Aware Search
 - Browse the full administrative hierarchy of Bangladesh: **8 divisions → 64 districts → 625 thanas**.
 - Find homes near where you live, study, or work.
 
 ### Modern Tech Behind the Scenes
-- **Zero-trust authentication** — JWTs issued by Supabase Auth are validated server-side against the public JWKS keys on every protected request.
-- **Offloaded media** — Images and videos never pass through the API server. The backend signs **Cloudflare R2 presigned URLs** so files stream directly to storage at full speed.
-- **Geospatial queries** — PostgreSQL + PostGIS powers fast spatial proximity searches (targeting <50ms responses).
-- **Hardened security** — JWT validation + database Row-Level Security + per-IP rate limiting + full audit logging for sensitive operations.
-- **Payments** — SSLCommerz integration (bKash / Nagad / cards) powers the token wallet used to unlock landlord contacts.
-- **Real-time chat & notifications** — Firebase Cloud Messaging for push notifications and Firestore for tenant–landlord chat.
+- **Zero-trust authentication** - JWTs issued by Supabase Auth are validated server-side against the public JWKS keys on every protected request.
+- **Offloaded media** - Images never pass through the API server. The backend signs **Cloudflare R2 presigned URLs** so files stream directly to storage at full speed.
+- **Geospatial queries** - PostgreSQL + PostGIS powers fast spatial proximity searches (targeting <50ms responses).
+- **Hardened security** - JWT validation + database Row-Level Security + per-IP rate limiting + full audit logging for sensitive operations.
+- **Payments** - SSLCommerz integration (bKash / Nagad / cards) powers the token wallet used to unlock landlord contacts.
+- **Real-time chat & notifications** - Firebase Cloud Messaging for push notifications and Firestore for tenant-landlord chat.
 
----
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Backend
 | Layer | Technology |
@@ -78,7 +72,7 @@ Renting a home in Bangladesh is traditionally done through word-of-mouth, local 
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 Flutter App
@@ -102,6 +96,6 @@ The backend follows a **package-by-feature** structure — each domain (location
 
 <div align="center">
 
-Built for Bangladesh. **বাসা খুঁজি — ঘর খোঁজা এখন স্মার্ট।**
+**Copyright (c) 2026 T.R. Anik**
 
 </div>
